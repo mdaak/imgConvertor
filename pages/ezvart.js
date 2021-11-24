@@ -13,7 +13,9 @@ const onSubmit = data => setImgData(data);
 
 // console.log(imgData);
 
-const .toDataURL("image/jpeg");
+const convarted=  imgData.toDataURL("image/jpeg");
+
+console.log(convarted);
 
 
 
