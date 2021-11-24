@@ -1,20 +1,31 @@
-import { useState } from "react";
 import style from "../styles/Home.module.css";
+import { useForm } from "react-hook-form";
+import { useState } from "react";
+
+
+
 
 const ezvart = () => {
+  const [imgData, setImgData] = useState();
 
-   const [data, setData] = useState()
+const { register, handleSubmit, watch} = useForm();
+const onSubmit = data => setImgData(data);
 
+// console.log(imgData);
+
+const .toDataURL("image/jpeg");
 
 
 
   return (
     <div className={style.main}>
       <div className={style.card}>
-        <form id={setData()}>
-          <input type="image" name="image file" id="fileData" />
-          <input type="submit" name="Submit" />
-        </form>
+      <form onSubmit={handleSubmit(onSubmit)}>
+
+      <input type="file" {...register("example")} />
+    
+      <input type="submit" />
+    </form>
       </div>
     </div>
   );
